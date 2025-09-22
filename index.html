@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0d1117; /* Dark mode */
+      background: #0d1117; /* Dark mode background */
       color: #fff;
       scroll-behavior: smooth;
       transition: background 0.4s, color 0.4s;
@@ -16,7 +16,7 @@
 
     /* Light Mode */
     body.light {
-      background: #eaeaea;  /* Light grey */
+      background: #FFF8F0;  /* Light cream */
       color: #111;
     }
 
@@ -33,9 +33,8 @@
       color: #222 !important;
     }
     body.light .nav-link.active-link {
-      color: #0d6efd !important;
+      color: #6f42c1 !important; /* lavender */
     }
-
     .active-link {
       color: #0d6efd !important;
       font-weight: bold;
@@ -88,27 +87,46 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Section titles */
     h2 {
       text-align: center;
       margin-bottom: 40px;
       font-weight: bold;
-      color: #0d6efd;
+      color: #6f42c1; /* dark mode lavender */
+      transition: color 0.4s;
+    }
+    body.light h2 {
+      color: #4b0082; /* indigo/darker shade for light mode */
     }
 
     /* Cards */
     .card {
       border-radius: 15px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.05); /* dark mode */
       border: 1px solid rgba(255,255,255,0.2);
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
       color: white;
-      transition: background 0.4s, color 0.4s;
+      transition: background 0.4s, color 0.4s, border 0.4s;
     }
     body.light .card {
-      background: #fff;
+      background: #E6E6FA; /* light lavender */
       color: #111;
-      border: 1px solid #ccc;
+      border: 1px solid #D8BFD8; 
+    }
+
+    /* Certificate List Items */
+    #certifications .list-group-item {
+      background: rgba(255, 255, 255, 0.05); /* dark mode */
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background 0.4s, color 0.4s;
+    }
+    body.light #certifications .list-group-item {
+      background: #E6E6FA; /* light mode lavender */
+      color: #111;
+      border: 1px solid #D8BFD8;
     }
 
     /* Project Buttons */
@@ -212,76 +230,93 @@
     </div>
   </section>
 
- <!-- Projects -->
-<section id="projects" class="container">
-  <h2>Projects</h2>
-  <div class="row">
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="row">
 
-    <!-- BrainyBot -->
-    <div class="col-md-4">
-      <div class="card p-3 mb-3">
-        <h5>BrainyBot</h5>
-        <p>A web platform for school students to apply and attend online summer classes.</p>
-        <small>Technologies: .NET, HTML, CSS, Bootstrap</small><br>
-        <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Project</a>
+      <!-- BrainyBot -->
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>BrainyBot</h5>
+          <p>A web platform for school students to apply and attend online summer classes.</p>
+          <small>Technologies: .NET, HTML, CSS, Bootstrap</small><br>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Project</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Certificate Generator -->
-    <div class="col-md-4">
-      <div class="card p-3 mb-3">
-        <h5>Certificate Generator</h5>
-        <p>Tool to generate multiple certificates simultaneously for academic/training events.</p>
-        <small>Technologies: HTML, CSS, JavaScript</small><br>
-        <a href="https://sriram31122003.github.io/Certigener/" 
-           class="btn btn-outline-primary btn-sm mt-2" target="_blank">
-          🔗 Live Demo
-        </a>
+      <!-- Certificate Generator -->
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>Certificate Generator</h5>
+          <p>Tool to generate multiple certificates simultaneously for academic/training events.</p>
+          <small>Technologies: HTML, CSS, JavaScript</small><br>
+          <a href="https://sriram31122003.github.io/Certigener/" 
+             class="btn btn-outline-primary btn-sm mt-2" target="_blank">🔗 Live Demo</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Turf Booking -->
-    <div class="col-md-4">
-      <div class="card p-3 mb-3">
-        <h5>Turf Booking System</h5>
-        <p>A web app to book turf grounds online with scheduling and management features.</p>
-        <small>Technologies: HTML, CSS, JavaScript</small><br>
-        <a href="https://sriram31122003.github.io/Turf-Booking/" 
-           class="btn btn-outline-primary btn-sm mt-2" target="_blank">
-          🔗 Live Demo
-        </a>
+      <!-- Turf Booking -->
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>Turf Booking System</h5>
+          <p>A web app to book turf grounds online with scheduling and management features.</p>
+          <small>Technologies: HTML, CSS, JavaScript</small><br>
+          <a href="https://sriram31122003.github.io/Turf-Booking/" 
+             class="btn btn-outline-primary btn-sm mt-2" target="_blank">🔗 Live Demo</a>
+        </div>
       </div>
-    </div>
 
-    <!-- OTP Verification -->
-    <div class="col-md-4">
-      <div class="card p-3 mb-3">
-        <h5>OTP Verification</h5>
-        <p>A secure OTP-based verification system for validating users during registration or login.</p>
-        <small>Technologies: HTML, CSS, JavaScript</small><br>
-        <a href="https://sriram31122003.github.io/OtpVerification/" 
-           class="btn btn-outline-primary btn-sm mt-2" target="_blank">
-          🔗 Live Demo
-        </a>
+      <!-- OTP Verification -->
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>OTP Verification</h5>
+          <p>A secure OTP-based verification system for validating users during registration or login.</p>
+          <small>Technologies: HTML, CSS, JavaScript</small><br>
+          <a href="https://sriram31122003.github.io/OtpVerification/" 
+             class="btn btn-outline-primary btn-sm mt-2" target="_blank">🔗 Live Demo</a>
+        </div>
       </div>
+
     </div>
-
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Experience -->
   <section id="experience" class="container">
-    <h2>Experience</h2>
+    <h2>WORK EXPERIENCE</h2>
     <div class="card p-3">
-      <h5>Junior Software Developer – Creative Ideas Solutions</h5>
-      <p><em>Jun 2024 – Present</em></p>
-      <ul>
-        <li>Developed responsive user interfaces with HTML, CSS, Bootstrap, and JavaScript.</li>
-        <li>Built and maintained APIs and MVC-based web applications.</li>
-        <li>Designed optimized SQL queries and reliable data models.</li>
-        <li>Led team projects ensuring quality and timely delivery.</li>
+      <h5>Full-Stack Developer | Web, API, Database, IoT & Team Leadership</h5>
+      <p>Designed and developed responsive user interfaces using HTML, CSS, Bootstrap, and JavaScript.</p>
+      <p>Built and maintained web applications using ASP.NET Core and MVC.</p>
+      <p>Managed MySQL databases, writing optimized SQL queries.</p>
+      <p>Created engaging visual content using Canva.</p>
+      <p>Demonstrated team leadership and project coordination.</p>
+      <hr />
+      <p><strong>Jun 2024 - Present</strong> <br> Junior Software Developer , Creative Ideas Solutions</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="container">
+    <h2>EDUCATION</h2>
+    <div class="card p-3">
+      <p><strong>2021 - 2024</strong> <br> Bachelor Of Computer Science</p>
+      <p>Government art and science college for women, Puliyakulam, Coimbatore</p>
+      <hr />
+      <p><strong>July 2024 - Present</strong> <br> Master of Computer Applications</p>
+      <p>School of Distance Education, Bharathiar University.</p>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="container">
+    <h2>CERTIFICATIONS</h2>
+    <div class="card p-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">C Programming variables Input Output</li>
+        <li class="list-group-item">Programming Foundations With Javascript, Html, and CSS</li>
+        <li class="list-group-item">Ultimate Microsoft Office; Excel, Word, PowerPoint & Access</li>
+        <li class="list-group-item">Participation in international level student workshop on Data science</li>
       </ul>
     </div>
   </section>
@@ -337,10 +372,7 @@
       let fromTop = window.scrollY + 100;
       navLinks.forEach(link => {
         let section = document.querySelector(link.getAttribute("href"));
-        if (
-          section.offsetTop <= fromTop &&
-          section.offsetTop + section.offsetHeight > fromTop
-        ) {
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
           link.classList.add("active-link");
         } else {
           link.classList.remove("active-link");
@@ -377,16 +409,10 @@
     }
 
     function connectParticles() {
-      const strokeColor = document.body.classList.contains("light")
-        ? "rgba(0,0,0,0.2)"
-        : "rgba(255,255,255,0.2)";
-
+      const strokeColor = document.body.classList.contains("light") ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.2)";
       for (let a = 0; a < particles.length; a++) {
         for (let b = a; b < particles.length; b++) {
-          let dist = Math.hypot(
-            particles[a].x - particles[b].x,
-            particles[a].y - particles[b].y
-          );
+          let dist = Math.hypot(particles[a].x - particles[b].x, particles[a].y - particles[b].y);
           if (dist < 120) {
             ctx.strokeStyle = strokeColor;
             ctx.lineWidth = 1;
@@ -414,7 +440,6 @@
       requestAnimationFrame(animate);
     }
     animate();
-
     window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -424,11 +449,7 @@
     const toggleBtn = document.getElementById("theme-toggle");
     toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("light");
-      if (document.body.classList.contains("light")) {
-        toggleBtn.textContent = "☀️";
-      } else {
-        toggleBtn.textContent = "🌙";
-      }
+      toggleBtn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
     });
   </script>
 </body>
